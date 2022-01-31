@@ -37,7 +37,6 @@ for($i=0; $i<count($dados); $i++){
     if($natureza == '"C"'){
         $query = "INSERT INTO clientes (data_hora, idOperacao,txld, destinatario, cpf_cnpj,valorTarifa, lancamento, valor, natureza, status) VALUES('$dataHora', '$idOperacao', '$txld','$destinatario', '$cpfCnpj', '$valorTarifa', '$lancamento', '$valor', '$natureza', 'ativo')";
         if($con->query($query) === TRUE){
-            echo "asdasda";
             continue;
         }else{
             echo "Error: " . $query . "<br>" . $con->error;
